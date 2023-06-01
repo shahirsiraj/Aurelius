@@ -28,6 +28,13 @@
   color: #61dafb;
 }
 
+#welcometitle {
+  text-align: center;
+  color: pink;
+  /* font-size: xx-large; */
+
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

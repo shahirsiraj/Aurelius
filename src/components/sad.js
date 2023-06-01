@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import { Configuration, OpenAIApi } from "openai";
 import {UserContext} from "../App.js"
+import TextField from '@mui/material/TextField';
+import Box from "@mui/material/Box"
+import { Button } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import Grid from '@mui/material/Grid';
 import axios from "axios"; // to research more on what axios does 
 
 
@@ -15,6 +20,8 @@ function Sad() {
   const [response, setResponse] = useState("")
 
   const inputText = useRef("")
+
+  const responseArr=[]
 
   const configuration = new Configuration({
     organization: "org-68YwlNwMZtpGRkF6uPxH8lHy",
@@ -49,14 +56,12 @@ function Sad() {
 
 // console.log(completion.data.choices[0].message.content)
 
-const onChange = () => {
-  
-
-}
 
 const submitText= (e) => {
   e.preventDefault()
   setText(inputText.current.value)
+  responseArr.push(text)
+  console.log(responseArr)
   inputText.current.value=""
 
 }
@@ -70,14 +75,64 @@ console.log(text)
 
   return( 
     <div>
-      <form> 
-      <h1>Would you like to share with me how you're feeling today?</h1>
-      <textarea placeholder="tell me how you're feeling!" ref={inputText}/>
-      <button type="submit" onClick={submitText}>Submit!</button>
-      </form>
-      <br/>
-      <br/>
-      <span>{response}</span>
+        <Grid container  direction="column" component="main" spacing={1} sx={{ height: '100vh' }}>
+        <Grid item >
+          <Box>
+          <Box component="form" display="flex" flexDirection="column" alignItems="center"  sx={{flexGrow:1}}>
+    
+        
+    <Typography component = "h1" variant = "h3">
+    Would you like to share with me how you're feeling today?
+
+    </Typography>
+    <Box/>
+    
+
+    
+
+
+<TextField
+      id="outlined-multiline-static"
+      label="What happened?"
+      multiline
+      color="secondary"
+      inputRef={inputText}
+      rows={5}
+      sx={{width:1000}}
+    />
+  <Button onClick={submitText} color="secondary">Submit!</Button>
+
+          </Box>
+    
+     
+      {/* <textarea placeholder="tell me how you're feeling!" ref={inputText}/> */}
+      
+      {/* <button type="submit" onClick={submitText}>Submit!</button> */}
+      
+
+
+
+ 
+<Grid>
+  <Box item> 
+  <Typography component="span" variant="div">
+    {/* {responseArr.map((text)=>{
+      return (
+      <ul>
+        {text}
+      </ul>
+      )
+    })} */}
+  {response}
+  </Typography>
+
+  </Box>
+</Grid>
+      </Box>
+      </Grid>
+      </Grid>
+      
+      
     </div>
   )
 }

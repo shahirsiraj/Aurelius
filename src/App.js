@@ -49,9 +49,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Welcome />} />
         <Route path="/mood" element={<Moods />} />
-        <Route path="/mood/happy" element={<Happy />} />
-        <Route path="/mood/sad" element={<Sad />} />
-        <Route path="/mood/anxious" element={<Anxious />} />
+        <Route path="/happy" element={<Happy />} />
+        <Route path="/sad" element={<Sad />} />
+        <Route path="/anxious" element={<Anxious />} />
       </Routes>
     </UserContext.Provider>
   );
