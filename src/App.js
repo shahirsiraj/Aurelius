@@ -45,7 +45,8 @@ function App() {
   };
 
   return (
-    <UserContext.Provider value={contextValue}>
+    
+      <UserContext.Provider value={contextValue}>
       <Routes>
         <Route path='/' element={<Welcome />} />
         <Route path="/mood" element={<Moods />} />
@@ -54,6 +55,9 @@ function App() {
         <Route path="/anxious" element={<Anxious />} />
       </Routes>
     </UserContext.Provider>
+
+
+    
   );
 }
 

@@ -8,11 +8,6 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 
-// Import the components corresponding to each mood
-import Happy from "./happy";
-import Sad from "./sad";
-import Anxious from "./anxious";
-import Welcome from "./welcome"
 
 function Moods() {
   const moodArr = ["Happy", "Sad", "Anxious"];
