@@ -34,7 +34,7 @@ console.log(process.env.OPENAI_API_KEY)
 
   const configuration = new Configuration({
     organization: "org-68YwlNwMZtpGRkF6uPxH8lHy",
-    apiKey: apiKey,
+    // apiKey: apiKey,
     
   });
   
