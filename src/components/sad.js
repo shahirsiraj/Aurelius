@@ -7,13 +7,17 @@ import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Grid from '@mui/material/Grid';
 
-// $OPENAI_API_KEY 
+
 
 function Sad() {
 
   const {name} = useContext(UserContext)
 
   const [text, setText] = useState("")
+
+
+
+
 
 
   const [response, setResponse] = useState("")
@@ -24,6 +28,7 @@ function Sad() {
 
   const configuration = new Configuration({
     organization: "org-68YwlNwMZtpGRkF6uPxH8lHy",
+    apiKey: "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"
     
   });
   
