@@ -1,5 +1,5 @@
-import React,{useState, useRef, useContext, createContext} from "react";
-import { Link, Routes } from "react-router-dom";
+import React,{useState, useContext, useEffect} from "react";
+import { Link} from "react-router-dom";
 import {UserContext} from "../App.js"
 import Button from '@mui/material/Button'
 import CssBaseline from '@mui/material/CssBaseline';
@@ -7,6 +7,7 @@ import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Divider  from '@mui/material/Divider'
 import Typography from '@mui/material/Typography';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -28,6 +29,8 @@ function Welcome() {
 
     const [open, setOpen] = useState(false);
     const [selectedMood, setSelectedMood] = useState("");
+    const [quote, setQuote] = useState("")
+
   
     const handleClickOpenDialog = (mood) => {
       setSelectedMood(mood);
@@ -45,6 +48,22 @@ function Welcome() {
     }
 
     const moodArr = ["Happy", "Sad", "Anxious"];
+
+    useEffect(()=>{
+      const stoicQuote="https://api.themotivate365.com/stoic-quote"
+
+      const callQuote = () => {
+        fetch(stoicQuote)
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data)
+            setQuote(data);
+          });
+      };
+      callQuote();
+        
+      }
+    ,[])
   
   
     return (
@@ -59,8 +78,8 @@ function Welcome() {
         // </Link>
       // </>
 
-      // <ThemeProvider theme={defaultTheme}>
-      <>
+
+      <div style={{ height: "100vh", backgroundColor:"floralwhite"}}>
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid
@@ -77,7 +96,7 @@ function Welcome() {
             backgroundPosition: 'center',
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid item xs={12} sm={8} md={5} backgroundColor='floralwhite' component={Paper} elevation={6} square>
           <Box
             sx={{
               my: 8,
@@ -85,6 +104,10 @@ function Welcome() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
+              border:"1",
+             
+              borderRadius:"10px"
+
             }}
           >
             <Typography component="h1" variant="h5">
@@ -99,10 +122,15 @@ function Welcome() {
                 onChange={onChange}
               />
       
-      {/* <Link to="/mood"> */}
-        <Button variant="outlined" value = {name} onClick={handleSubmit}>Submit</Button>
-          {/* <button type="submit" value={name} onClick={onSubmit}>Submi{}t</button> */}
-        {/* </Link> */}
+
+        
+        <Button variant= "outlined" color="secondary" value = {name} onClick={handleSubmit}>Submit</Button>
+        <br/>
+        <br/>
+        <Divider></Divider>
+        <Typography component="span" variant="h5" >
+            {quote.quote} - {quote.author} 
+          </Typography>
             </Box>
           </Box>
         </Grid>
@@ -122,23 +150,23 @@ function Welcome() {
       <DialogActions>
         {moodArr.map((mood) => (
           <Link to={mood.toLowerCase()} key={mood}>
-            <Button onClick={() => setSelectedMood(mood)}>{mood}</Button>
+            <Button variant= "outlined" color="secondary" onClick={() => setSelectedMood(mood)}>{mood}</Button>
           </Link>
         ))}
-        <Button onClick={handleCloseDialog}>Go Back!</Button>
+        <Button variant= "outlined" color="secondary" onClick={handleCloseDialog}>Go Back!</Button>
         
         
       </DialogActions>
     </Dialog>
-
+{/* 
     {selectedMood && (
       <div>
         <h2>Selected Mood: {selectedMood}</h2>
       </div>
-    )}
-</>
+    )} */}
+</div>
 
-    // </ThemeProvider>
+ 
     );
   }
   

@@ -1,16 +1,12 @@
-import React, {useEffect, useContext} from "react";
-import {Howl, Howler} from 'howler';
+import React, {useContext} from "react";
+import {Howl} from 'howler';
 import gif from "./ATEd.gif"
 import {UserContext} from "../App.js"
-import { Box, Container, Paper } from "@mui/material";
+import { Box } from "@mui/material";
 import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import Grid from '@mui/material/Grid';
 
-// import sound.mp3 from "./sound.mp3"
-//npm install react-sound 
-//find a way to animate text 
-//OR just import react-player then call a video url 
+
 
 
 function Anxious () {
@@ -43,30 +39,24 @@ const {name} = useContext(UserContext)
      
 
 
-    //   useEffect((
-    //     setTimeout((
-    //         // sound.play()
-    //     ), 10000)
-    //   ),[])
-
 
 
 
 
 
 return (
-<div style={{ height: "100vh" }}>
-    <Box display="flex" flexDirection="column" alignItems="center" backgroundColor="black" sx={{flexGrow:1}} >
+<div style={{ height: "100vh", backgroundColor:"floralwhite"}}>
+    <Box display="flex" flexDirection="column" borderRadius="32px" border={1}alignItems="center" backgroundColor="lavender" sx={{flexGrow:1}} >
     <br/>
     <br/>
-    <Typography component="h1" variant="h3"textAlign="center" color="white">Give me 10 minutes of your time, {name}, let's walk through this together.</Typography>
+    <Typography component="h1" variant="h3"textAlign="center" color="black">Give me 10 minutes of your time, {name}, let's walk through this together.</Typography>
     <br/><br/>
     <img src={gif} alt="wait till the img loads!" width= "70%"
   height= "auto"></img>
     <br/>
     <br/>
-    <button onClick={handleStart}>Start!</button>
-    <button onClick={handlePause}>Pause!</button>
+    <Button onClick={handleStart} variant= "outlined" color="secondary">Start</Button>
+    <Button onClick={handlePause} variant= "outlined" color="secondary">Pause</Button>
     </Box>
     </div>
 

@@ -6,12 +6,11 @@ import Box from "@mui/material/Box"
 import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Grid from '@mui/material/Grid';
-import axios from "axios"; // to research more on what axios does 
 
+// $OPENAI_API_KEY 
 
 function Sad() {
 
-  // const user = useContext(userContext)
   const {name} = useContext(UserContext)
 
   const [text, setText] = useState("")
@@ -25,16 +24,15 @@ function Sad() {
 
   const configuration = new Configuration({
     organization: "org-68YwlNwMZtpGRkF6uPxH8lHy",
-    apiKey: "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",
+    apiKey: "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",
   });
   
   const openai = new OpenAIApi(configuration);
 
 
-  //wrap in useEffect with empty array dependency => call the fetchChatCompletion function also 
+
   useEffect(() => {
-    // Wrap the fetchChatCompletion function in a conditional statement
-    // to check if the user has entered any text
+
     if (text) {
       async function fetchChatCompletion() {
         const completion = await openai.createChatCompletion({
@@ -74,23 +72,23 @@ const submitText= (e) => {
 console.log(text)
 
   return( 
-    <div>
-        <Grid container  direction="column" component="main" spacing={1} sx={{ height: '100vh' }}>
-        <Grid item >
-          <Box>
-          <Box component="form" display="flex" flexDirection="column" alignItems="center"  sx={{flexGrow:1}}>
+    <div style={{ height: "100vh", backgroundColor:"floralwhite"}}>
+        <Grid container  direction="column" component="main" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{ height: '100vh' }}>
+        <Grid item>
+         
+          <Box component="form" spacing={4} backgroundColor="lavender" border={1} borderColor="secondary.main" borderRadius="30px" display="flex" flexDirection="column" alignItems="center"  sx={{flexGrow:1
+          }}>
     
         
     <Typography component = "h1" variant = "h3">
     Would you like to share with me how you're feeling today?
 
     </Typography>
-    <Box/>
+    
     
 
     
-
-
+<Box item>
 <TextField
       id="outlined-multiline-static"
       label="What happened?"
@@ -100,35 +98,26 @@ console.log(text)
       rows={5}
       sx={{width:1000}}
     />
-  <Button onClick={submitText} color="secondary">Submit!</Button>
+    <br/>
+  <Button onClick={submitText} variant= "outlined" color="secondary">Submit!</Button>
+
+</Box>
 
           </Box>
-    
-     
-      {/* <textarea placeholder="tell me how you're feeling!" ref={inputText}/> */}
-      
-      {/* <button type="submit" onClick={submitText}>Submit!</button> */}
-      
-
-
-
  
-<Grid>
+
+<Box backgroundColor="azure" border={1} borderColor="secondary.main" borderRadius="30px" display="flex" flexDirection="column" alignItems="center"  sx={{flexGrow:1
+          }}>
   <Box item> 
-  <Typography component="span" variant="div">
-    {/* {responseArr.map((text)=>{
-      return (
-      <ul>
-        {text}
-      </ul>
-      )
-    })} */}
+  <Typography component="span" variant="h4">
+
   {response}
   </Typography>
 
   </Box>
-</Grid>
+
       </Box>
+    
       </Grid>
       </Grid>
       
