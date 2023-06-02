@@ -16,7 +16,7 @@ function Sad() {
   const [text, setText] = useState("")
 
 
-  const apiKey = "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"
+  // const apiKey = "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"
   
   // process.env.OPENAI_API_KEY;
 
