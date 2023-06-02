@@ -24,7 +24,7 @@ function Sad() {
 
   const configuration = new Configuration({
     organization: "org-68YwlNwMZtpGRkF6uPxH8lHy",
-    apiKey: "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",
+    
   });
   
   const openai = new OpenAIApi(configuration);
