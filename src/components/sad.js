@@ -16,10 +16,12 @@ function Sad() {
   const [text, setText] = useState("")
 
 
-  const apiKey = process.env.OPENAI_API_KEY;
+  const apiKey = "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"
+  
+  // process.env.OPENAI_API_KEY;
 
   
-
+console.log(process.env.OPENAI_API_KEY)
 
 
 
@@ -32,7 +34,7 @@ function Sad() {
 
   const configuration = new Configuration({
     organization: "org-68YwlNwMZtpGRkF6uPxH8lHy",
-    apiKey: apiKey
+    apiKey: apiKey,
     
   });
   
