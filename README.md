@@ -9,7 +9,8 @@ The Aurelius Mental Health App is a React-based application designed to provide 
 
 ## Technologies used 
 - Frontend : react.js 
-- Packages : Howler, OpenAI, Materials UI 
+- Hooks : useState, createContext, useContext, useEffect, useRef
+- Packages : Howler, OpenAI, Materials UI, react-router 
 - Deployment : Vercel
 
 ## User Stories 
