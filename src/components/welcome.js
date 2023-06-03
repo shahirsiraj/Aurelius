@@ -16,16 +16,10 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 
-
-
-// import Moods from "mood.js"
-
-
-
-
-
 function Welcome() {
     const { name, onChange, onSubmit } = useContext(UserContext);
+
+
 
     const [open, setOpen] = useState(false);
     const [selectedMood, setSelectedMood] = useState("");
@@ -67,16 +61,7 @@ function Welcome() {
   
   
     return (
-      // <>
-      //   <h1 id="welcometitle">Welcome to Aurelius, what is your name?</h1>
-      //   <br />
-      //   <TextField label="Name" variant="outlined" value={name} onChange={onChange}/>
-      //   {/* <input type="name" value={name} onChange={onChange}></input> */}
-        // <Link to="/mood">
-        // <Button variant="outlined" value = {name} onClick={onSubmit}>Submit</Button>
-        //   {/* <button type="submit" value={name} onClick={onSubmit}>Submi{}t</button> */}
-        // </Link>
-      // </>
+ 
 
 
       <div style={{ height: "100vh", backgroundColor:"floralwhite"}}>
@@ -158,12 +143,7 @@ function Welcome() {
         
       </DialogActions>
     </Dialog>
-{/* 
-    {selectedMood && (
-      <div>
-        <h2>Selected Mood: {selectedMood}</h2>
-      </div>
-    )} */}
+
 </div>
 
  
