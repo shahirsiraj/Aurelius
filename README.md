@@ -32,11 +32,7 @@ The Aurelius Mental Health App is a React-based application designed to provide 
 -The user must be able to pause the guided meditation session 
 
 ## Wireframes
-![Untitled-1](https://github.com/shahirsiraj/seif-project2-Aurelius/assets/125945242/9bc42fca-ee92-4964-933c-27c609801197)
-![Untitled-2](https://github.com/shahirsiraj/seif-project2-Aurelius/assets/125945242/2f3f5628-2758-4ccd-8d0e-a2cfba1096e2)
-![Untitled-3](https://github.com/shahirsiraj/seif-project2-Aurelius/assets/125945242/0538254e-2134-4ef0-af64-ffbc1bf2b8e6)
-![Untitled-4](https://github.com/shahirsiraj/seif-project2-Aurelius/assets/125945242/e4b6af81-81d7-4298-939a-c1614e850b80)
-![Untitled-5](https://github.com/shahirsiraj/seif-project2-Aurelius/assets/125945242/48b8cce3-6ffc-4b02-a5a1-65214b97f2ee)
+
 
 
 ## Ideation and Development
