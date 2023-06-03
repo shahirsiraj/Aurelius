@@ -43,9 +43,10 @@ After coming up with the idea, I wanted to create something that was welcoming v
 ## Issues faced
 - The biggest issue faced was with the OpenAI Key, as it constantly gets banned when commited to github. Currently, I have set an env variable to Vercel but it is still not working to as of right now, the Sad component does not work when deployed.
 - Another issue that I faced was with styling, learning materials ui was a challenge and currently, the app does not look polished. 
+- Learning to work with the OpenAI package and configuring it
 
 ## Future additions 
 - Migrating to a state management library 
 - Improving styling and adding a theme context for each component/box/grid 
 - Adding more emotions that the user may be feeling
--
+
