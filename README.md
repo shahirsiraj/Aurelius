@@ -57,4 +57,5 @@ After coming up with the idea, I wanted to create something that was welcoming v
 - Migrating to a state management library 
 - Improving styling and adding a theme context for each component/box/grid 
 - Adding more emotions that the user may be feeling
+- Turning the sad component into a full chatbot, that keeps track of all the messages 
 
