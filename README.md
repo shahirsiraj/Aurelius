@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Aurelius, you mental health buddy! 
+The Aurelius Mental Health App is a React-based application designed to provide mental health support and resources to users. The app offers various features to help users manage their mental well-being, including mood tracking, gratitude journaling, and interactive conversations with a virtual mental health professional.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-Happy: a simple gratitude journal 
 
-## Available Scripts
+-Sad: Speak to aurelius through the OpenAI api
 
-In the project directory, you can run:
+-Anxious: Be taken through a guided meditation for 10 minutes 
 
-### `npm start`
+## Technologies used 
+- Frontend : react.js 
+- Hooks : useState, createContext, useContext, useEffect, useRef
+- Packages : Howler, OpenAI, Materials UI, react-router 
+- Deployment : Vercel
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Stories 
+-The user must be able to input their name 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-The user must be able to select their emotions
 
-### `npm test`
+-The user must be able to log why they are happy 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-The user must be able to see what made them happy previously 
 
-### `npm run build`
+-The user must be able to remove what made them happy previously 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-The user must be able to send a message to Aurelius 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-The user must be able to receive a message from Aurelius 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-The user must be able to hear and play the guided meditation session 
 
-### `npm run eject`
+-The user must be able to pause the guided meditation session 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Wireframes
+![Screenshot_2023-06-03_11-35-08](https://github.com/shahirsiraj/seif-project2-Aurelius/assets/125945242/ebddea31-69fb-433b-b0e5-9d83ce40d108)
+![Screenshot_2023-06-03_11-35-30](https://github.com/shahirsiraj/seif-project2-Aurelius/assets/125945242/8559981c-21b9-4760-ac92-38c8836a49c1)
+![Screenshot_2023-06-03_11-35-48](https://github.com/shahirsiraj/seif-project2-Aurelius/assets/125945242/2e3721e8-4c95-4e5f-83c2-915723815607)
+![Screenshot_2023-06-03_11-36-03](https://github.com/shahirsiraj/seif-project2-Aurelius/assets/125945242/68005ae9-1098-49b7-91a8-30661e578b87)
+![Screenshot_2023-06-03_11-36-19](https://github.com/shahirsiraj/seif-project2-Aurelius/assets/125945242/0603715a-138d-4fcc-b316-2d97ffd4d48e)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Ideation and Development
+I came with the idea for this app based on my previous work experience as a crisis support executive. It started off as an idea to leverage OpenAI to create a more specific chatbot to discuss your emotions with and to feel like your are being listened to. I then decided to expand it further to include other ranges of emotions as I realised that majority of people out there don't celebrate happiness. 
 
-## Learn More
+### Development Process
+After coming up with the idea, I wanted to create something that was welcoming visually and didn't look too complicated for everyone to use. I started off using basic hooks such as useState and useRef, with the intention of migrating to a state management library like Redux. I started off with figma wireframes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Issues faced
+- The biggest issue faced was with the OpenAI Key, as it constantly gets banned when commited to github. Currently, I have set an env variable to Vercel but it is still not working to as of right now, the Sad component does not work when deployed.
+- Another issue that I faced was with styling, learning materials ui was a challenge and currently, the app does not look polished. 
+- Learning to work with the OpenAI package and configuring it
 
-### Code Splitting
+## Future additions 
+- Migrating to a state management library 
+- Improving styling and adding a theme context for each component/box/grid 
+- Adding more emotions that the user may be feeling
+- Turning the sad component into a full chatbot, that keeps track of all the messages 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
