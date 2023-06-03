@@ -11,13 +11,21 @@ This application is intended to be your mental health tracker/companion. It was 
 
 ## User Stories 
 -The user must be able to input their name 
+
 -The user must be able to select their emotions
+
 -The user must be able to log why they are happy 
+
 -The user must be able to see what made them happy previously 
+
 -The user must be able to remove what made them happy previously 
+
 -The user must be able to send a message to Aurelius 
+
 -The user must be able to receive a message from Aurelius 
+
 -The user must be able to hear and play the guided meditation session 
+
 -The user must be able to pause the guided meditation session 
 
 ## Wireframe
