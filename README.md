@@ -1,7 +1,10 @@
 # Aurelius, you mental health buddy! 
 This application is intended to be your mental health tracker/companion. It was created to address the different emotions that we face on the daily. Currently, there are 3 emotions in the app: Happy, Sad and Anxious. 
+
 -Happy: a simple gratitude journal 
+
 -Sad: Speak to aurelius through the OpenAI api
+
 -Anxious: Be taken through a guided meditation for 10 minutes 
 
 ## Technologies used 
