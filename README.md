@@ -1,5 +1,5 @@
 # Aurelius, you mental health buddy! 
-This application is intended to be your mental health tracker/companion. It was created to address the different emotions that we face on the daily. Currently, there are 3 emotions in the app: Happy, Sad and Anxious. 
+The Aurelius Mental Health App is a React-based application designed to provide mental health support and resources to users. The app offers various features to help users manage their mental well-being, including mood tracking, gratitude journaling, and interactive conversations with a virtual mental health professional.
 
 -Happy: a simple gratitude journal 
 
@@ -34,8 +34,18 @@ This application is intended to be your mental health tracker/companion. It was 
 ## Wireframe
 
 ## Ideation and Development
+I came with the idea for this app based on my previous work experience as a crisis support executive. It started off as an idea to leverage OpenAI to create a more specific chatbot to discuss your emotions with and to feel like your are being listened to. I then decided to expand it further to include other ranges of emotions as I realised that majority of people out there don't celebrate happiness. 
+
+### Development Process
+After coming up with the idea, I wanted to create something that was welcoming visually and didn't look too complicated for everyone to use. I started off using basic hooks such as useState and useRef, with the intention of migrating to a state management library like Redux. I started off with figma wireframes
+
 
 ## Issues faced
+- The biggest issue faced was with the OpenAI Key, as it constantly gets banned when commited to github. Currently, I have set an env variable to Vercel but it is still not working to as of right now, the Sad component does not work when deployed.
+- Another issue that I faced was with styling, learning materials ui was a challenge and currently, the app does not look polished. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Future additions 
+- Migrating to a state management library 
+- Improving styling and adding a theme context for each component/box/grid 
+- Adding more emotions that the user may be feeling
+-
