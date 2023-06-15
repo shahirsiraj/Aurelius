@@ -19,7 +19,7 @@ function Sad() {
   // const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 
   
-// console.log(process.env.OPENAI_API_KEY)
+// console.log(process.env.REACT_APP_OPENAI_API_KEY)
 
 
 
@@ -32,7 +32,7 @@ function Sad() {
 
   const configuration = new Configuration({
     organization: "org-68YwlNwMZtpGRkF6uPxH8lHy",
-    apiKey:  process.env.NEXT_PUBLIC_OPENAI_API_KEY
+    apiKey:  process.env.REACT_APP_OPENAI_API_KEY
     
   });
   
@@ -60,6 +60,12 @@ function Sad() {
       fetchChatCompletion();
     }
   }, [text, name])
+
+
+
+  useEffect(()=> {
+
+  },[response])
 
 // console.log(completion.data.choices[0].message.content)
 
@@ -91,12 +97,7 @@ console.log(text)
         
     <Typography component = "h1" variant = "h3">
     Would you like to share with me how you're feeling today?
-
     </Typography>
-    
-    
-
-    
 <Box item>
 <TextField
       id="outlined-multiline-static"
@@ -109,12 +110,8 @@ console.log(text)
     />
     <br/>
   <Button onClick={submitText} variant= "outlined" color="secondary">Submit!</Button>
-
 </Box>
-
           </Box>
- 
-
 <Box backgroundColor="azure" border={1} borderColor="secondary.main" borderRadius="30px" display="flex" flexDirection="column" alignItems="center"  sx={{flexGrow:1
           }}>
   <Box item> 
@@ -124,9 +121,7 @@ console.log(text)
   </Typography>
 
   </Box>
-
       </Box>
-    
       </Grid>
       </Grid>
       
