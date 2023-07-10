@@ -1,4 +1,4 @@
-# Aurelius, you mental health buddy! 
+# Aurelius, your mental health buddy! 
 The Aurelius Mental Health App is a React-based application designed to provide mental health support and resources to users. The app offers various features to help users manage their mental well-being, including mood tracking, gratitude journaling, and interactive conversations with a virtual mental health professional.
 
 -Happy: a simple gratitude journal 
